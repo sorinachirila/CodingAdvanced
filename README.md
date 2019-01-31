@@ -1,5 +1,5 @@
 # CodingAdvanced 
-Basic Dao Testing project made with:
+Basic DAO Testing project made with:
 - Java,
 - Maven,
 - junit 4.12.
