@@ -71,5 +71,6 @@ public class Application {
 ======== CREATE ONE USER ========
         User{name='Matei', email='matei@y.com'}
 =============================*/
+//test comment purpose
     }
 }
