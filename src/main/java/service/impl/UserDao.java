@@ -20,27 +20,25 @@ public class UserDao implements Dao<User> {
     }
 
     public void save(User user) {
-       users.add(user);
+        users.add(user);
     }
 
     public User get(int index) {
-        if(users.size() == 0){
+        if (users.size() == 0) {
             throw new RuntimeException();
         }
         return users.get(index);
     }
 
     public List<User> getAll() {
-
         return users;
     }
 
     public void update(User user, String[] parameters) throws RuntimeException {
-
         String name = parameters[0];
         String email = parameters[1];
 
-        if(name == null){
+        if (name == "") {
             throw new RuntimeException();
         }
         user.setName(name);
@@ -48,9 +46,9 @@ public class UserDao implements Dao<User> {
     }
 
     public void delete(User user) {
-        if(users.size() == 0){
+        if (users.size() == 0) {
             throw new RuntimeException();
         }
-          users.remove(user);
+        users.remove(user);
     }
 }

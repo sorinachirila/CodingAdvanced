@@ -29,6 +29,7 @@ public class UserDaoTest {
         users.get(0);
         //testWhenTheListOfUsersIsEmptyGetMethodThrowsRuntimeException
     }
+
     //READ --- get -- one element
     @Test
     public void testWhenTheListOfUsersHasOneElementGetMethodReturnsIt() {
@@ -47,6 +48,7 @@ public class UserDaoTest {
         assertEquals(0, userDao.getAll().size());
         //testWhenTheListOfUsersIsEmptyGetAllMethodReturnsEmptyList
     }
+
     //READ --- getAll -- one element
     @Test
     public void testWhenTheListOfUsersHasOneElementGetAllMethodReturnsListOfSizeOne() {
@@ -77,14 +79,15 @@ public class UserDaoTest {
 //        testWhenTheListOfUsersIsEmptySaveMethodAddsOneUser
 //        User{name='Sorina', email='sorina@gmail.com'}
     }
+
     //CREATE --- save -- when list has one element, initially
     @Test
     public void testWhenTheListOfUsersHasOneElementSaveMethodAddSecondUser() {
-          System.out.println("testWhenTheListOfUsersHasOneElementSaveMethodAddSecondUser");
-          userDao.save(new User("Sorina", "sorina@gmail.com"));
-          userDao.save(new User("Georgiana", "georgiana@gmail.com"));
-          assertEquals(2, userDao.getAll().size());
-          //testWhenTheListOfUsersHasOneElementSaveMethodAddSecondUser
+        System.out.println("testWhenTheListOfUsersHasOneElementSaveMethodAddSecondUser");
+        userDao.save(new User("Sorina", "sorina@gmail.com"));
+        userDao.save(new User("Georgiana", "georgiana@gmail.com"));
+        assertEquals(2, userDao.getAll().size());
+        //testWhenTheListOfUsersHasOneElementSaveMethodAddSecondUser
     }
 
     //DELETE --- delete -- when the list is empty
@@ -93,8 +96,10 @@ public class UserDaoTest {
         System.out.println("testWhenTheListOfUsersIsEmptyDeleteMethodThrowsRuntimeException");
         User user1 = new User("", "s@s.com");
         userDao.delete(user1);
+        assertEquals(0, userDao.getAll().size());
         //testWhenTheListOfUsersIsEmptyDeleteMethodThrowsRuntimeException
     }
+
     //DELETE --- delete -- when the list has one element
     @Test
     public void testWhenTheListOfUsersHasOneElementDeleteMethodEraseThatElement() {
@@ -138,7 +143,6 @@ public class UserDaoTest {
         // testWhenTheListOfUsersHasOneElementUpdateMethodReturnsObjectModified
         // [User{name='Georgiana', email='serban@gmail.com'}]
     }
-
 
 
 }

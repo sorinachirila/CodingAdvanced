@@ -8,7 +8,7 @@ public interface Dao<T> {
 
     //CREATE
     public abstract void save(T t);
-
+   // void save(T t); -- echivalentul
     //READ de la index  si return tot
     public abstract T get(int index);
     public abstract List<T> getAll();
